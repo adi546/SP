@@ -1,0 +1,5 @@
+ALTER TABLE DealerOrderMHZPC 
+ADD TMRejectionReasonId INT NULL,
+    HARejectionReasonId INT NULL,
+    CONSTRAINT FK_TMRejection FOREIGN KEY (TMRejectionReasonId) REFERENCES RejectionReasons(Id),
+    CONSTRAINT FK_HARejection FOREIGN KEY (HARejectionReasonId) REFERENCES RejectionReasons(Id);
